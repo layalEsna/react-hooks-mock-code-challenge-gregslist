@@ -27,15 +27,39 @@
 
 
 
-import React from "react";
+// import React from "react";
 
-function Search({searchItem, handleSearch}) {
-  function handleSubmit(e) {
-    e.preventDefault();
+// function Search({searchItem, handleSearch}) {
+//   function handleSubmit(e) {
+//     e.preventDefault();
     
-  }
+//   }
 
   
+
+//   return (
+//     <form className="searchbar" onSubmit={handleSubmit}>
+//       <input
+//         type="text"
+//         id="search"
+//         placeholder="search free stuff"
+//         value={searchItem}
+//         onChange={(e) => handleSearch(e.target.value)}
+//       />
+//       <button type="submit">🔍</button>
+//     </form>
+//   );
+// }
+
+// export default Search;
+
+import React from "react";
+
+function Search({  handleSearch, searchItem}) {
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("submitted");
+  }
 
   return (
     <form className="searchbar" onSubmit={handleSubmit}>
@@ -52,4 +76,3 @@ function Search({searchItem, handleSearch}) {
 }
 
 export default Search;
-
